@@ -1,0 +1,52 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/go
+{
+	"name": "Go",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "python:3.11.9-slim",
+	"runArgs": [
+		"--name", "devcontianer-python"
+    ],
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// https://github.com/devcontainers/features/tree/main/src
+	"features": {
+		// "ghcr.io/devcontainers/features/common-utils:2": {
+		// 	"configureZshAsDefaultShell": true,
+		// 	"upgradePackages": false
+		// },
+		// "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+		// "ghcr.io/devcontainers/features/git": {
+		// 	"version": "latest"
+		// },
+		// "ghcr.io/devcontainers/features/python:1": {}
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"mhutchie.git-graph"
+			]
+		}
+	},
+
+	// "forwardPorts": [],
+
+	// Use 'portsAttributes' to set default properties for specific forwarded ports. 
+	// More info: https://containers.dev/implementors/json_reference/#port-attributes
+	// "portsAttributes": {
+	// 	"9000": {
+	// 		"label": "Hello Remote World",
+	// 		"onAutoForward": "notify"
+	// 	}
+	// }
+
+	"postCreateCommand": "python -v"
+	// "postCreateCommand": "/bin/sh -c './.devcontainer/postCreateCommand.sh'"  # Used for more complex `postCreateCommand`
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
