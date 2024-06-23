@@ -11,7 +11,6 @@
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// https://github.com/devcontainers/features/tree/main/src
 	"features": {
-		// TODO: did work, but then it starting getting a GPG signing issue
 		"ghcr.io/devcontainers/features/common-utils:2": {
 			"configureZshAsDefaultShell": true,
 			"upgradePackages": false
